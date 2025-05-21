@@ -20,4 +20,6 @@ data class CustomerEntity(
         customer.cpf,
         customer.isValidCpf
     )
+
+    fun toCustomer() = Customer(id, name, address.toAddress(), cpf, isValidCpf)
 }
