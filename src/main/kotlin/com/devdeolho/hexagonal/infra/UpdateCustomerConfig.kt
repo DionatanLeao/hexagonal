@@ -20,4 +20,5 @@ class UpdateCustomerConfig {
         findAddressByZipCodeAdapter,
         updateCustomerAdapter
     )
+
 }
