@@ -10,12 +10,8 @@ import kotlin.jvm.optionals.getOrNull
 class FindCustomerByIdAdapter(
     private val customerRepository: CustomerRepository
 ) : FindCustomerByIdOutputPort {
-    override fun find(id: String): Customer? {
-        return customerRepository.findById(id)
-            .getOrNull()
-            .let {
+    override fun find(id: String): Customer? =
+        customerRepository.findById(id).getOrNull().let {
                 return it?.toCustomer()
-            }
-    }
-
+        }
 }
