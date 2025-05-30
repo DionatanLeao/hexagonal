@@ -2,7 +2,9 @@ package com.devdeolho.hexagonal.adpters.output
 
 import com.devdeolho.hexagonal.application.ports.output.SendCpfForValidationOutputPort
 import org.springframework.kafka.core.KafkaTemplate
+import org.springframework.stereotype.Component
 
+@Component
 class SendCpfForValidationAdapter(
     private val kafkaTemplate: KafkaTemplate<String, String>
 ) : SendCpfForValidationOutputPort {
