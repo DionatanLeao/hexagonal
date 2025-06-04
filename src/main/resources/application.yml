@@ -1,3 +1,8 @@
 spring:
   application:
     name: hexagonal
+
+devdeolho:
+  client:
+    address:
+      url: http://localhost:8082/addresses
