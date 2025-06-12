@@ -7,7 +7,7 @@ data class AddressEntity(
     val city: String,
     val state: String
 ) {
-    constructor(address: Address): this (
+    constructor(address: Address): this(
         address.street,
         address.city,
         address.state
