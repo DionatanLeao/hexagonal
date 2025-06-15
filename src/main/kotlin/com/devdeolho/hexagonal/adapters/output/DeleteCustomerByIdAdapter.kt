@@ -13,5 +13,4 @@ class DeleteCustomerByIdAdapter(
         customerRepository.deleteById(id)
     }
 
-
 }
