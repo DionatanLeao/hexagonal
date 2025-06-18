@@ -1,6 +1,7 @@
 package com.devdeolho.hexagonal.config
 
 import com.devdeolho.hexagonal.adapters.output.FindAddressByZipCodeAdapter
+import com.devdeolho.hexagonal.adapters.output.SendCpfForValidationAdapter
 import com.devdeolho.hexagonal.adapters.output.UpdateCustomerAdapter
 import com.devdeolho.hexagonal.application.core.usecase.FindCustomerByIdUseCase
 import com.devdeolho.hexagonal.application.core.usecase.UpdateCustomerUseCase
@@ -14,10 +15,12 @@ class UpdateCustomerConfig {
     fun updateCustomer(
         findCustomerByIdUseCase: FindCustomerByIdUseCase,
         findAddressByZipCodeAdapter: FindAddressByZipCodeAdapter,
-        updateCustomerAdapter: UpdateCustomerAdapter
+        updateCustomerAdapter: UpdateCustomerAdapter,
+        sendCpfForValidationAdapter: SendCpfForValidationAdapter
     ) = UpdateCustomerUseCase(
         findCustomerByIdUseCase,
         findAddressByZipCodeAdapter,
-        updateCustomerAdapter
+        updateCustomerAdapter,
+        sendCpfForValidationAdapter
     )
 }
